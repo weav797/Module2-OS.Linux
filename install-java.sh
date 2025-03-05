@@ -3,7 +3,7 @@
 apt update
 apt install -y default-jre
 
-
+# Do not want to see output of java -version on command line
 install_result=$(java -version 2>&1 > /dev/null | grep "java version\|openjdk version" | awk '{print substr($3,2,2)}')
 
 if [ "$install_result" == "" ]
