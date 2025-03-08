@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This project was inspired by training, however, this script is custom solves a problem for quickly investigating resource usage.
+# This project was inspired by training, however, this script is custom, and solves a problem for quickly investigating resource usage.
 # Specifically, it was inspired by training exercises that expect you to solve a problem without giving you the solutions, as anyone expects in the workforce.
 #
 # 
