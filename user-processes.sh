@@ -15,9 +15,11 @@
 
 echo "This program tells you your current processes running for your user."
 echo "Please type 'mem' or 'cpu' to sort by memory or cpu resources. "
-
 read SortingInput
 SortCmdOption=""
+
+echo "Additionally, please tell us how many of the processes you would like to see at this time."
+read NumOfProcesses
 
 if [ "$SortingInput" == "mem" ]
 then
@@ -30,9 +32,5 @@ then
 else
          echo "This process failed. Recheck logic or investigate elsewhere."
 fi
-
-echo "Additionally, please tell us how many of the processes you would like to see at this time."
-
-read NumOfProcesses
 
 ps aux | grep $USER | sort -rn -k $SortCmdOption | head -n $NumOfProcesses
